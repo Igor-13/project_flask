@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content %}
+    <h1>
+        Welcome to our clothing store!
+    </h1>
+    <h2>
+        Please select the quality of the product:
+    </h2>
+    <ul>
+        {% for cat in category %}
+        <li>
+            <a href="{{ url_for(cat.f_name) }}">{{ cat.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
